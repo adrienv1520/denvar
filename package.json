@@ -26,7 +26,7 @@
     "configuration"
   ],
   "preferGlobal": false,
-  "private": true,
+  "private": false,
   "analyze": false,
   "license": "MIT"
 }

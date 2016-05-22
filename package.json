@@ -1,0 +1,31 @@
+{
+  "name": "denvar",
+  "version": "0.1.0",
+  "description": "A tool to load environments variables in development, test production environnement locally and finally export them for production",
+  "author": "Adrien Valcke <a.valcke@free.fr>",
+  "main": "lib/index.js",
+  "bin": {
+    "denvar": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdVg/denvar.git"
+  },
+  "dependencies": {
+    "fs-check": "~0.1.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "environment",
+    "envar",
+    "development",
+    "production"
+  ],
+  "preferGlobal": false,
+  "private": true,
+  "analyze": false,
+  "license": "MIT"
+}

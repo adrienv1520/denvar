@@ -72,6 +72,7 @@ There are two ways to load an environment. See *Discussion* section for more inf
     ```
 
   2. **From your .npmrc file (npm configuration file)**
+
     Yes ! Node automatically load the KEY=VALUE-format variables in your .npmrc file at the root project directory of your app.
     You can directly access them from `process.env.npm_config_YOUR_VARIABLE` without the help of any module ! .npmrc is also loaded in *Heroku*. There is no matter of any conflict in process.env because your environment variables are not reloaded in it but are set in an projectConfig object.
 
@@ -129,30 +130,34 @@ There are two ways to load an environment. See *Discussion* section for more inf
 
 ### Use it as a command line tool
   - **Create** a .npmrc or env.json sample file at your project root directory or at a specific path (by default a *env.json* file is created at your project root directory) :
+
   `denvar --create|-c json|npmrc [path]`
 
   Examples :
   ```
-  denvar -c                 (creates env.json at project root directory)
-  denvar --create npmrc     (creates .npmrc at project root directory)
-  denvar -c npmrc ~/www/
+  $ denvar -c                 (creates env.json at project root directory)
+  $ denvar --create npmrc     (creates .npmrc at project root directory)
+  $ denvar -c npmrc ~/www/
   ```
 
   - **Export** specified variables to a *Heroku* remote (by default 'production' variables to 'heroku' remote) :
+
   `denvar --export-heroku|exph [environment] [remote]`
 
   In order to export variables to *Heroku*, you must have a [GitHub](https://github.com/) and [Heroku](https://www.heroku.com/) account plus [Git](https://git-scm.com/) and [heroku-toolbelt](https://toolbelt.heroku.com/) installed. See the [full stack project example](https://github.com/AdVg/express-hero.git) for more details.
 
   Examples :
   ```
-  denvar --export-heroku
-  denvar -exph test stage
+  $ denvar --export-heroku
+  $ denvar -exph test stage
   ```
 
   - Amazon AWS (ElasticBeanstalk, CloudFront, S3, ...) and others :
-  `soon`
+
+  `$oon`
 
   - Help
+
   `denvar --help|-h`
 
 ### CONFIDENTIAL
@@ -178,6 +183,7 @@ What *Heroku* says about best practices :
 Please notice that the first method I use will never overset an existed variables in process.env but finally it can be a problem if there are many of our environment variables that we should rename for your application to run ! Okay we can use an alias ?
 
 ## Contributing
+
 Any advices or help will be greatly welcome. Feel free to contribute or discuss about these methods so we can improve our best practices and make our work far better.
 
 Here's some features that will be nice to add :

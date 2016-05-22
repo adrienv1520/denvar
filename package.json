@@ -1,7 +1,7 @@
 {
   "name": "denvar",
   "version": "0.1.0",
-  "description": "A tool to load environments variables in development, test production environnement locally and finally export them for production",
+  "description": "A node module and command line tool to load environments variables in development, test production environnement locally and finally export them for production",
   "author": "Adrien Valcke <a.valcke@free.fr>",
   "main": "lib/index.js",
   "bin": {
@@ -20,12 +20,13 @@
   "devDependencies": {},
   "keywords": [
     "environment",
-    "envar",
+    "denvar",
     "development",
-    "production"
+    "production",
+    "configuration"
   ],
   "preferGlobal": false,
-  "private": true,
+  "private": false,
   "analyze": false,
   "license": "MIT"
 }

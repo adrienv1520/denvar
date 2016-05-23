@@ -8,7 +8,7 @@ Denvar make the distinction between your development variables, your production 
 
 ## A full project example
 
-You will find a [full stack project booster](https://github.com/AdVg/express-hero.git) on Express that uses *Denvar* and [Front Flower](https://github.com/AdVg/front-flower.git), another module that i've made to kick off the workflow with npm as build tool for assets, checking security in Node apps, running test to finally deploy an app on Heroku and export variables (stage or production), all automatically.
+You will find a [full stack project booster](https://github.com/AdVg/express-hero) on Express that uses *Denvar* and [Front Flower](https://github.com/AdVg/front-flower), another module that i've made to kick off the workflow with npm as build tool for assets, checking security in Node apps, running test to finally deploy an app on Heroku and export variables (stage or production), all automatically.
 
 ## Installation
 
@@ -144,7 +144,7 @@ There are two ways to load an environment. See *Discussion* section for more inf
 
   `denvar --export-heroku|exph [environment] [remote]`
 
-  In order to export variables to *Heroku*, you must have a [GitHub](https://github.com/) and [Heroku](https://www.heroku.com/) account plus [Git](https://git-scm.com/) and [heroku-toolbelt](https://toolbelt.heroku.com/) installed. See the [full stack project example](https://github.com/AdVg/express-hero.git) for more details.
+  In order to export variables to *Heroku*, you must have a [GitHub](https://github.com/) and [Heroku](https://www.heroku.com/) account plus [Git](https://git-scm.com/) and [heroku-toolbelt](https://toolbelt.heroku.com/) installed. See the [full stack project example](https://github.com/AdVg/express-hero) for more details.
 
   Examples :
   ```

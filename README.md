@@ -127,6 +127,57 @@ There are two ways to load an environment. See *Discussion* section for more inf
 
     debug('This is my S3 username that i\'m going to use soon : ' + projectConfig.S3_USER);
     ```
+  3. Access *.npmrc* variables in *package.json* ...?!
+
+    Yes, in fact there is a third awesome way to access your environment variables ! Here is a simple *.npmrc* file :
+    ```
+    access=restricted
+
+    ; Project
+    PROJECT_NAME=hello from denvar !
+    DESCRIPTION=The last Dinosaur !
+
+    ; S3 credentials
+    S3_USER=superman
+    S3_PASS=cryptonite
+
+    ; Some util paths
+    ASSETS_SASS=assets/sass/app.scss
+    DIST_CSS=dist/css/app.css
+    ```
+
+    You can access them in *package.json* with *$npm_config_YOUR_VARIABLE* variable name like this :
+
+    ```javascript
+    {
+      "name": "denvar",
+      "version": "0.1.0",
+      "description": "$npm_config_DESCRIPTION",
+      "author": "Adrien Valcke <a.valcke@free.fr>",
+      "scripts": {
+        "sass": "node-sass --output-style compressed $npm_config_ASSETS_SASS $npm_config_DIST_CSS",
+        "autoprefixer": "postcss -u autoprefixer -b 'last 2 versions' -r $npm_config_DIST_CSS",
+        "hello": "echo $npm_config_PROJECT_NAME"
+      },
+      "dependencies": {},
+      "devDependencies": {
+        "autoprefixer": "~6.3.6",
+        "node-sass": "~3.7.0"
+      }
+    }
+    ```
+
+    Running `$ npm run hello` will show in console *hello from denvar !* .
+
+    After all, the *.npmrc* file is the project configuration file.
+
+    Now imagine :
+      - you could define some variables to not repeat them in *package.json* like path to *js*, *css*, *markup* (assets/dist), deploy on *Amazon S3* with your credentials, automatically login in Heroku, or automatically do everything by npm scripts,
+      - if a tool is not available in CLI, write your own js file and make a npm script that runs 'node my-script.js',
+      - you still can access them in your *process.env* Object in Node app,
+      - and of course, your *.npmrc* must be added to *.gitignore* so it stays confidential.
+
+    See [npm Flower](https://github.com/AdVg/npm-flower) project example using only npm as build and environment tool.
 
 ### Use it as a command line tool
   - **Create** a .npmrc or env.json sample file at your project root directory or at a specific path (by default a *env.json* file is created at your project root directory) :

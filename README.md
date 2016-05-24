@@ -172,7 +172,7 @@ There are two ways to load an environment. See *Discussion* section for more inf
       - sometimes very useful.
 
     Cons :
-      - too long and in fact a bit repetitive
+      - too long and in fact a bit repetitive.
 
     See [npm flower](https://github.com/AdVg/npm-flower) project example using only npm as build tool.
 

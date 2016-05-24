@@ -129,17 +129,13 @@ There are two ways to load an environment. See *Discussion* section for more inf
     ```
   3. Access *.npmrc* variables in *package.json* ...?!
 
-    Yes, in fact there is a third awesome way to access your environment variables ! Here is a simple *.npmrc* file :
+    Yes, in fact there is a third way to access your environment variables. Here is a simple *.npmrc* file :
     ```
     access=restricted
 
     ; Project
     PROJECT_NAME=hello from denvar !
     DESCRIPTION=The last Dinosaur !
-
-    ; S3 credentials
-    S3_USER=superman
-    S3_PASS=cryptonite
 
     ; Some util paths
     ASSETS_SASS=assets/sass/app.scss
@@ -169,15 +165,16 @@ There are two ways to load an environment. See *Discussion* section for more inf
 
     Running `$ npm run hello` will show in console *hello from denvar !* .
 
-    After all, the *.npmrc* file is the project configuration file.
-
-    Now imagine :
-      - you could define some variables to not repeat them in *package.json* like path to *js*, *css*, *markup* (assets/dist), deploy on *Amazon S3* with your credentials, automatically login in Heroku, or automatically do everything by npm scripts,
-      - if a tool is not available in CLI, write your own js file and make a npm script that runs 'node my-script.js',
+    Pros :
+      - you could define some variables to not repeat them in *package.json* like path to *js*, *css*, *markup* (assets/dist), automatically login in *Heroku*, or do everything by npm scripts that require (confidential) variables,
       - you still can access them in your *process.env* Object in Node app,
-      - and of course, your *.npmrc* must be added to *.gitignore* so it stays confidential.
+      - your *.npmrc* must be added to *.gitignore* so it stays confidential,
+      - sometimes very useful.
 
-    See [npm Flower](https://github.com/AdVg/npm-flower) project example using only npm as build and environment tool.
+    Cons :
+      - too long and in fact a bit repetitive
+
+    See [npm flower](https://github.com/AdVg/npm-flower) project example using only npm as build tool.
 
 ### Use it as a command line tool
   - **Create** a .npmrc or env.json sample file at your project root directory or at a specific path (by default a *env.json* file is created at your project root directory) :

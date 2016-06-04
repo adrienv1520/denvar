@@ -10,9 +10,6 @@ if (!userArgs[0]) {
   console.log(help);
 } else {
   switch (userArgs[0]) {
-    case '-d':
-      denvar.load('prod');
-      break;
     case '--create':
     case '-c':
       var type = 'json';

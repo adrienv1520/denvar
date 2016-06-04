@@ -1,6 +1,6 @@
 {
   "name": "denvar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A node module and command line tool to load environments variables in development, test production environnement locally and finally export them for production",
   "author": "Adrien Valcke <a.valcke@free.fr>",
   "main": "lib/index.js",
